@@ -56,9 +56,31 @@ function nextSequence() {
   var randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour);
 
-  $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
-  playSound(randomChosenColour);
+  var i = 0;
+  var intervalId = setInterval(function() {
+    var colorToPlay = gamePattern[i];
+    $("#" + colorToPlay).fadeIn(100).fadeOut(100).fadeIn(100);
+    playSound(colorToPlay);
+    i++;
+    if (i >= gamePattern.length) {
+      clearInterval(intervalId);
+    }
+  }, 700);
 }
+
+
+function playGamePattern(pattern) {
+  var i = 0;
+  var intervalId = setInterval(function() {
+    animatePress(pattern[i]);
+    playSound(pattern[i]);
+    i++;
+    if (i >= pattern.length) {
+      clearInterval(intervalId);
+    }
+  }, 500); // Adjust the delay time between each color as needed
+}
+
 
 function animatePress(currentColor) {
   $("#" + currentColor).addClass("pressed");
