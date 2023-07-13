@@ -12,9 +12,13 @@ body {
 
 .container {
   display: block;
-  width: 50%;
+  width: auto;
   margin: auto;
 
+}
+.score-board {
+  background-color: aliceblue;
+  border-radius: 8%;
 }
 
 .btn {
@@ -34,6 +38,12 @@ body {
 .red {
   background-color: red;
 }
+.orange {
+  background-color: orange;
+}
+.purple {
+  background-color: purple;
+}
 
 .green {
   background-color: green;
@@ -50,4 +60,49 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+/* Styles for PC */
+@media only screen and (min-width: 1024px) {
+  /* Add your PC styles here */
+}
+
+/* Styles for tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Add your tablet styles here */
+  .container {
+    display: block;
+    width: auto;
+    margin: auto;
+  
+  }
+  
+  .btn {
+    margin: 25px;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    border: 10px solid black;
+    border-radius: 20%;
+  }
+}
+
+/* Styles for mobile devices */
+@media only screen and (max-width: 767px) {
+  /* Add your mobile styles here */
+  .container {
+    display: block;
+    width: auto;
+    margin: auto;
+  
+  }
+  
+  .btn {
+    margin: 25px;
+    display: inline-block;
+    height: 125px;
+    width: 125px;
+    border: 10px solid black;
+    border-radius: 20%;
+  }
 }
