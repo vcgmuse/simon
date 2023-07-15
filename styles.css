@@ -17,17 +17,26 @@ body {
 
 }
 .score-board {
-  background-color: aliceblue;
+  background-color: black;
+  color: white;
   border-radius: 8%;
+}
+.score-board h3 {
+  font-size: 2rem;
+}
+.user-stats {
+  font-size: 1.5rem;
+  margin: 5%;
 }
 
 .btn {
-  margin: 25px;
+  margin: 2px;
   display: inline-block;
   height: 200px;
   width: 200px;
   border: 10px solid black;
   border-radius: 20%;
+  opacity: 1; /* Add opacity to ensure visibility */
 }
 
 .game-over {
@@ -78,7 +87,7 @@ body {
   }
   
   .btn {
-    margin: 25px;
+    margin: 2px;
     display: inline-block;
     height: 200px;
     width: 200px;
@@ -98,7 +107,7 @@ body {
   }
   
   .btn {
-    margin: 25px;
+    margin: 2px;
     display: inline-block;
     height: 125px;
     width: 125px;

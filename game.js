@@ -7,13 +7,14 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-$(document).keypress(function() {
-  if (!started) {
+$(document).keypress(function(event) {
+  if (!started && event.key === 'a') {
     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
   }
 });
+
 
 $(".btn").click(function() {
 
@@ -59,14 +60,15 @@ function nextSequence() {
   var i = 0;
   var intervalId = setInterval(function() {
     var colorToPlay = gamePattern[i];
-    $("#" + colorToPlay).fadeIn(100).fadeOut(100).fadeIn(100);
     playSound(colorToPlay);
+    animatePress(colorToPlay);
     i++;
     if (i >= gamePattern.length) {
       clearInterval(intervalId);
     }
   }, 700);
 }
+
 
 
 function playGamePattern(pattern) {
