@@ -6,14 +6,13 @@ var userClickedPattern = [];
 
 var started = false;
 var level = 0;
-document.addEventListener("touchstart", function(event) => {
+document.addEventListener("touchstart", function(event) {
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
   }
-
-})
+});
 $(document).keypress(function(event) {
   if (!started) {
     $("#level-title").text("Level " + level);
