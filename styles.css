@@ -30,7 +30,12 @@ body {
   margin:  5%;
   color: #FEF2BF;
 }
-
+.score {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin:  5%;
+  color: #FEF2BF;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -44,7 +49,10 @@ body {
   font-size: 2rem;
   border-radius: 8%;
 }
-
+.top-scores {
+  color: white;
+  font-size: 2rem;
+}
 .btn {
   margin: 25px;
   display: inline-block;
@@ -143,7 +151,7 @@ body {
 }
 
 /* Styles for mobile devices */
-@media only screen and (min-width: 400px) and (max-width: 600px) {
+@media only screen and (min-width: 300px) and (max-width: 600px) {
   /* Add your mobile styles here */
   #level-title {
     font-family: 'Press Start 2P', cursive;
